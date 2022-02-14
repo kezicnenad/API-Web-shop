@@ -1,0 +1,31 @@
+a{
+  color: #fff !important;
+}
+
+a.active{
+  background-color: #fff;
+  color: #000 !important;
+  border-radius: 8px;
+}
+
+.navbar{
+  background-color: purple;
+  padding: 2% 5%;
+  color: #fff
+}
+
+.navbar.nav{
+  padding: 0px;
+}
+
+.custom-control.custom-switch{
+  margin-right: 20px;
+}
+
+.custom-control.custom-switch label{
+  margin-right: 10px;
+}
+
+.basket{
+  margin-left: 10px;
+}

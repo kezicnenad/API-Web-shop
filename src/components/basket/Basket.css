@@ -1,0 +1,207 @@
+.artikli{
+  display: flexbox;
+}
+
+.right{
+  display: flex;
+  justify-content: right;
+}
+
+.tekst{
+  padding-top: 14px !important;
+}
+
+.addPromo{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.inputPromo{
+  width: 60%;
+}
+
+.inputPromo,
+.inputPromo::placeholder{
+  padding: 0px 15px;
+}
+
+.inputBtn{
+  width: 16%;
+  padding: 15px;
+}
+
+h2{
+  padding-bottom: 30px;
+}
+
+h5{
+  padding-bottom: 20px;
+}
+
+.totalCost{
+  margin: 70px 0px;
+}
+
+.makeOrder{
+  margin: 30px 0px;
+}
+
+.link{
+  color: red !important;
+  padding: 0;
+}
+
+.promoCodes{
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.promoCodes > p > button{
+  margin-right: 10px;
+  padding: 0px 5px;
+}
+
+.error{
+  color: red;
+  font-size: .6em;
+}
+
+.inUseTitle{
+  padding-top: 40px;
+}
+
+.form-control{
+  color: #333 !important;
+}
+
+.btn-outline-secondary{
+  background-color: white !important;
+  color:red !important;
+}
+
+.quantity{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.orderText{
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+.tekst{
+  /* padding-top: 14px !important; */
+}
+
+.addPromo{
+  /* display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-top: 30px; */
+}
+
+.inputPromo{
+  /* width: 60%; */
+}
+
+.inputPromo,
+.inputPromo::placeholder{
+  padding: 0px 3px;
+}
+
+.inputBtn{
+  padding: 5px;
+}
+
+}
+
+
+@media screen and (max-width: 1024px) {
+.tekst{
+  /* padding-top: 14px !important; */
+}
+
+.addPromo{
+  /* display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-top: 30px; */
+}
+
+.inputPromo{
+  /* width: 60%; */
+}
+
+.inputPromo,
+.inputPromo::placeholder{
+  padding: 0px 3px;
+}
+
+.inputBtn{
+  font-size: .7em;
+  padding: 5px;
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+.tekst{
+  /* padding-top: 14px !important; */
+}
+
+.addPromo{
+  /* display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-top: 30px; */
+}
+
+.inputPromo{
+  /* width: 60%; */
+}
+
+.inputPromo,
+.inputPromo::placeholder{
+  padding: 0px px;
+}
+
+.inputBtn{
+  font-size: .6em;
+  padding: 3px;
+}
+
+}
+
+
+
+@media screen and (max-width: 428px) {
+.addPromo{
+  /* display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-top: 30px; */
+  margin-top: 0px;
+}
+
+.inputPromo{
+  /* width: 60%; */
+}
+
+.inputPromo,
+.inputPromo::placeholder{
+  padding: 0px 3px;
+  font-size: .8em;
+}
+
+.inputBtn{
+  font-size: .6em;
+  padding: 3px;
+  font-size: .5em;
+}
+
+}
+
