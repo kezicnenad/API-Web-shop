@@ -102,7 +102,7 @@ function App() {
   };
 
   // GET USER DATA FROM CHECKOUT FORM function
-  const getUserData = (address, mail, cardNumber, cvv, expiration) => {
+  const getUserData = (address, mail, cardNumber) => {
     setUserData({id: token, address: address, mail: mail, cardNumber: cardNumber})
   }
 
