@@ -65,7 +65,7 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
         setPromo20EUsed(true);
         setPromo('');
         setTotalPromo((20).toFixed(2));
-        (promo5Used === false) ? (setCheckTotal((getTotal() -20).toFixed(2))) : (setCheckTotal(((getTotal() -20) - (getTotal() * 0.05)).toFixed(2)));
+        (promo5Used === false) ? (setCheckTotal((getTotal() - 20).toFixed(2))) : (setCheckTotal(((getTotal() - 20).toFixed(2) - ((getTotal() - 20) * 0.05)).toFixed(2)));
       }
       else{
         alert('Usage of promo code 20%OFF cannot be in conjuction with other codes');

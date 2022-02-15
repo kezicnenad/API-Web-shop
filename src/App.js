@@ -62,6 +62,7 @@ function App() {
   // REMOVE ALL ITEMS FROM BASKET AFTER CHECKOUT FINISHED
   const clearBasket = () => {
     setBasket([]);
+    window.location.replace("/");
   }
 
   // CHECKBOX CHOOSING DEFAULT OR API DATA function

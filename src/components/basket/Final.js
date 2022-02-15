@@ -74,15 +74,14 @@ function Final({articles, basket, clearBasket, getTotal, userData, promo20Used, 
         {(promo20EUsed === true) && <p>Promo code 20 €: <b>-20.00 €</b></p>}
       </div>
       <div>
-        <h4 className='quantity'>Included quantity discounts</h4>
-        {offerDifferencies.map((offer, index) => (
+        {(offerDifferencies.length !== 0) && <h4 className='quantity'>Included quantity discounts</h4>}
+        {(offerDifferencies.length !== 0) && offerDifferencies.map((offer, index) => (
           <p key={index}>{offer.name}: <b>{offer.price.toFixed(2)} €</b></p>
         ))}
       </div>
       <h4 className='totalCost'>Total cost <b>{checkTotal} €</b></h4>
       <button onClick={() => {
         clearBasket();
-        window.location.replace("/");
       }} className='btn btn-warning'>Close</button>
     </div>
   );
