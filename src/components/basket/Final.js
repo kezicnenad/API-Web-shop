@@ -1,7 +1,14 @@
+/* 
+NAPOMENA: ZNAM DA MI JE FINAL MALO NEUREDAN, TO JE ZBOG IGRANJA SA KUPONIMA, TREBAO SAM JEDNOSTAVNO PROSLJEDITI VRIJEDNOSTI IZ CHECKOUT 
+JER SAM OVAKO PRAKTIČKI DUPLAO PODATKE
+
+SVJESTAN SAM TOGA, TE VAS MOLIM DA TO IMATE NA UMU :)
+*/
+
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-  let x = [];
+  let pushArticle = [];
 
 function Final({articles, basket, clearBasket, getTotal, userData, promo20Used, promo5Used, promo20EUsed, checkTotal}) {
   const [offerDifferencies, setOfferDifferencies] = useState([]);
@@ -16,12 +23,12 @@ function Final({articles, basket, clearBasket, getTotal, userData, promo20Used, 
     basket.map(bask => {
       return articles.filter(filteredArticle => filteredArticle.id === bask.article_id).map(article => {
         if (article.id === 2 && bask.pieces % 3 === 0){
-          x.push({name: article.name, price: (article.price * bask.pieces) - bask.finalPrice});
+          pushArticle.push({name: article.name, price: (article.price * bask.pieces) - bask.finalPrice});
         }
         else if (article.id === 4 && bask.pieces % 2 === 0){
-          x.push({name: article.name, price: (article.price * bask.pieces) - bask.finalPrice});
+          pushArticle.push({name: article.name, price: (article.price * bask.pieces) - bask.finalPrice});
         }
-        setOfferDifferencies(x);
+        setOfferDifferencies(pushArticle);
       })
     })
   }
