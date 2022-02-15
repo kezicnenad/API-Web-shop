@@ -7,21 +7,17 @@ import './Basket.css';
 
 function Basket({articles, basket, removeFromBasket, getUserData, userData, clearBasket, getTotal}) {
   
-  // WRITED TEXT FROM INPUT EVENT
   const [Promo, setPromo] = useState('');
 
-  // CHECKOUT IS CUPON USED OR NOT FOR ADD Promo BUTTON
   const [promo20Used, setPromo20Used] = useState(false);
   const [promo5Used, setPromo5Used] = useState(false);
   const [promo20EUsed, setPromo20EUsed] = useState(false);
 
-  // CHECKS IS ALL DATA ENTERED AND GET LAST SCREEN
   const [checkOut, setCheckOut] = useState(false);
 
   const [promoTotal, setTotalPromo] = useState(getTotal());
   const [checkTotal, setCheckTotal] = useState(getTotal());
 
-  // GET DATA FROM INPUT function
   const enterPromo = e => {
     setPromo(e.target.value);
   }
@@ -30,7 +26,6 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
 
   }
 
-  // USE AND CALCULATE TOTAL PRICE BASED ON Promo function
   const addPromo = () =>  {
     if (Promo === '20%OFF'){
       if (promo20EUsed === false && promo5Used === false){
@@ -82,7 +77,6 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
     }
   }
 
-  // GET NEXT SCREEN, LAST SCREEN function
   const checkOutBtn = () => {
     if (checkOut === true){
       setCheckOut(false);
@@ -109,7 +103,6 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
     (promo5Used === true && setCheckTotal((getTotal() - (getTotal() * 0.05)).toFixed(2)));
   }
 
-  // DISPLAY ARTICLES BASED ON BASKET function
   const basketArticles = () => {
     return basket.map(bask => (
       articles.filter(filteredArticle => filteredArticle.id === bask.article_id).map(article => (
@@ -126,7 +119,6 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
     ))
   }
 
-  // DISPLAY ALL TABLE WITH ARTICLES AND PRICES, OR NO DATA SCREEN
   const basketList = () => {
     return (
       (basket.length !== 0) ? 
@@ -157,7 +149,6 @@ function Basket({articles, basket, removeFromBasket, getUserData, userData, clea
     (<h4>No items in basket. Please go to <a className='link' href='/'>Web Shop</a> and choose some articles</h4>))
   }
 
-  // RENDER
   return(
     <div className='container'>
       <div className='row'>

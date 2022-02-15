@@ -26,24 +26,6 @@ function Final({articles, basket, clearBasket, getTotal, userData, promo20Used, 
     })
   }
 
-  const displayTotal = () => {
-    if (promo20Used === true){
-      return ((getTotal() - (getTotal() * 0.2)).toFixed(2));
-    }
-    else if (promo20EUsed === true && promo5Used === true){
-      return ((getTotal() - ((getTotal() * 0.05) + 20)).toFixed(2));
-    }
-    else if (promo5Used === true){
-      return ((getTotal() - (getTotal() * 0.05)).toFixed(2));
-    }
-    else if (promo20EUsed === true){
-      return ((getTotal() - 20).toFixed(2));
-    }
-    else{
-      return getTotal();
-    }
-  }
-
   const basketArticles = () => {
     return (basket.length > 0) && basket.map(bask => (
       articles.filter(filteredArticle => filteredArticle.id === bask.article_id).map(article => (
