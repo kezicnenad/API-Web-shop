@@ -22,6 +22,10 @@ a.active{
   margin-right: 20px;
 }
 
+.custom-control.custom-switch > i{
+  color: white;
+}
+
 .custom-control.custom-switch label{
   margin-right: 10px;
 }

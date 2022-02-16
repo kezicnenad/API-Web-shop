@@ -12,7 +12,7 @@ function Navigation({basket, apiCheckbox, fetchApiCheckbox}) {
       <div className='navbar nav'>
         <div className='custom-control custom-switch'>
           <label className='custom-control-label' htmlFor='customSwitch1'>Get Articles from API</label>
-          <input onChange={fetchApiCheckbox} type='checkbox' className='custom-control-input' id='customSwitch1' />
+          {(apiCheckbox === true) ? <i onClick={fetchApiCheckbox} id='customSwitch1' class=" fa fa-toggle-on" aria-hidden="true"></i> : <i onClick={fetchApiCheckbox} id='customSwitch1' class="fa fa-toggle-off" aria-hidden="true"></i>}
         </div>
 
         {/* <input onChange={fetchApiCheckbox} type="checkbox" checked={apiCheckbox} data-toggle="toggle" data-onstyle="warning" /> */}
