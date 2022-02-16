@@ -20,7 +20,7 @@ function ArticleList({articles, addToBasket}) {
   return(
     <div className='container'>
       <div className='row'>
-        <h2>Article List</h2>
+        <h2 id='el'>Article List</h2>
         {articleList()}
       </div>
     </div>
