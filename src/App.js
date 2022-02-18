@@ -6,7 +6,7 @@ import Basket from './components/basket/Basket';
 import './App.css';
 
 function App() {
-
+//
   const [articles, setArticles] = useState([
     {id: 1, name: 'Smart Hub', price: 49.99},
     {id: 2, name: 'Motion Sensor', price: 24.99},
